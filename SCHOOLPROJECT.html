@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tech-O</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+        
+    </head>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Cal Sans', 'Segoe UI';
+            
+        }
+
+        .background {
+            background: url(new-project/main-images/background.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+            z-index: -1;
+            
+        }
+
+        .navbar {
+            display: flex;
+            width: 100%;
+            height: 15vh;
+            margin: auto;
+            align-items: center;
+            justify-content: flex-end;
+        }
+            
+
+        .logo {
+            width: 200px;
+            cursor: pointer;
+            margin-right: auto;
+            padding-left: 40px;
+        }
+
+        .navbar {
+            list-style: none;
+            border-bottom: solid;
+            border-color: white;
+            
+            
+        }
+
+        .navbar li {
+            display: inline-block;
+            padding: 0px 25px;
+            
+        }
+
+        .navbar li a {
+            transition: all 0.5s ease 0.05s;
+            text-decoration: none;
+            font-family: 'Cal Sans', 'Segoe UI';
+            color: white;
+            font-size: 15px;
+        }
+
+        .navbar li a:hover {
+            background-image: conic-gradient(
+            from 0deg,
+            indigo 0deg,
+            mediumblue 90deg,
+            slateblue 150deg,
+            darkslateblue 210deg,
+            midnightblue 270deg,
+            #1a1a2e 330deg,
+            indigo 360deg );
+            border-style: solid;
+            border-color: white;
+            padding:9px 20px;
+            border-radius: 30px 0px 30px 0px;
+            
+        }
+
+        .background button {
+            background-color: rgba(76, 51, 142, 0.5);
+            padding: 10px 40px;
+            border-radius: 30px 0px 30px 0px;
+            color: white;
+            font-family: 'Cal Sans', 'Segoe UI';
+            font-size: 15px;
+            margin-right: 50px;
+            margin-left: 30px;
+            transition: all 0.5s ease 0s;
+            border-style: solid;
+            border-color: white;
+        }
+
+        .background button:hover {
+            transform: translatey(4px) scale(1.15);
+            border-style: solid;
+            border-color: white;
+            padding: 10px 40px;
+            border-radius: 0px 30px 0px 30px;
+            background-image: conic-gradient(
+            from 0deg,
+            indigo 0deg,
+            mediumblue 90deg,
+            slateblue 150deg,
+            darkslateblue 210deg,
+            midnightblue 270deg,
+            #1a1a2e 330deg,
+            indigo 360deg );
+        }
+
+        .background video {
+            display: flex;
+            border-style: none;
+            border-radius: 200px;
+            margin-right: auto;
+            width: 900px;
+            margin-left: 100px;
+            margin-top: 100px;
+            transition: all 0.5s ease 0s;
+        }
+
+        .background video:hover {
+            border-radius: 20px;
+            transform: scale(1.08);
+            margin-left: 100px;
+
+        }
+        
+        .main {
+            display: flex;
+            
+
+        }
+
+        .home-title {
+            font-family: 'Cal Sans', 'Segoe UI';
+            color: white;
+            text-align: end;
+            font-size: 60px;
+            position: relative;
+            left:-40px;
+            margin-top: 15px;
+            
+                    
+        }
+
+        .Technology-text {
+            font-size: 80px; 
+            color: rgb(76, 51, 142);
+        }
+
+        .main-text {
+            margin-left: auto;
+            text-align: center;
+            font-family: 'Segoe UI';
+            max-width:400px;
+            font-size: 16px;
+        }
+
+        .arrow {
+            font-size: 50px;
+            transition: all 0.5s ease 0.2s;
+            cursor: pointer;
+            
+        }
+
+        .arrow:hover {
+            transform: translateY(5px);
+            color:rgb(76, 51, 142);
+        }
+
+        .main-video-container {
+            position: relative;
+            padding-top: 30px;
+            background-color: black;
+            display: flex;
+            
+            
+        }
+
+        .main-video-container::after {
+            content: "";
+            overflow:hidden;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(to top, black, transparent);
+            z-index: 2;
+            
+        }
+
+        .main-video-container video {
+           width: 100%;
+           border-radius: 800px 800px 0px 0px;
+        }
+
+        .main-video-text {
+            position: absolute;
+            bottom: 10%;
+            left: 5%;
+            color: white;
+            font-size: 80px;
+            z-index: 3;
+        }
+
+        .main-video-text button {
+            font-size: 30px;
+            border-radius: 100px 100px 0px 0px;
+            padding: 10px 40px;
+            color: white;
+            font-family: 'Cal Sans', 'Segoe UI';
+            font-size: 30px;
+            margin-left: 40px;
+            border-style: none;
+            background-color: rgba(76, 51, 142, 1);
+            transition: all 0.5s ease 0s;
+            z-index: 3;
+            cursor: pointer;
+        }
+
+        .main-video-text button:hover {
+            transform: translateX(-30px);
+            background-color: orange;
+            color: black;
+            padding: 10px 190px;
+        }
+
+        a {
+            color: white;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .Products-section {
+            margin-top: 80px;
+            
+        }
+
+        .Products-title {
+            font-size: 80px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .product-banner {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+
+        }
+
+        .product-banner img {
+            border-radius: 1000px;
+            width: 1300px;
+            height: 500px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: all 0.5s ease 0s;
+            box-shadow: 1px 3px 5px 2px;
+    
+        }
+
+        .product-banner img:hover {
+            transform: scale(1.05);
+            box-shadow: 10px 10px 10px 1px;
+        }
+
+        .banner-text {
+            position: absolute;
+            bottom: 30px;
+            font-size: 30px;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            text-indent: 30px;
+        }
+
+
+        .Products {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 itemss , 1 row */
+            gap: 100px; 
+            margin: 0px 120px 0px 120px;
+            justify-items: center;
+            margin-top: 40px;
+        }
+
+        .Product-item {
+            display: flex;
+            flex-direction: row;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            width: 100%;
+            box-shadow: 1px 1px 15px 2px rgba(0, 0, 0, 0.4);
+            
+        }
+
+        .Product-item:hover {
+            transform: scale(1.05);
+            box-shadow: 5px 15px 30px 10px rgba(0, 0, 0, 0.4);
+            border: 1px solid gray;
+        }
+
+        .Product-item img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: contain;
+        }
+
+        .Product-item h1 {
+            font-size: 24px;
+            color: rgb(0, 0, 0);
+            font-family: 'Cal Sans', sans-serif;
+            margin: 40px 30px 0px 30px;
+            
+        }
+
+        .Product-item span {
+            font-size: 18px;
+            font-weight: lighter;
+        }
+
+
+        .Product-item button {
+            background-color: rgba(76, 51, 142, 0.8);
+            color: white;
+            border: none;
+            margin-top: 70px;
+            font-size: 20px;
+            padding: 15px 90px;
+            border-radius: 25px;
+            font-family: 'Cal Sans';
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .Product-item button:hover {
+            background-color: indigo;
+        }
+
+
+        .popup-modal-product {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            backdrop-filter: blur(15px);
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+        }
+        
+
+        .popup-content-product  {
+            display: block;
+            justify-items: center;
+            align-content: center;
+            color: rgb(0, 0, 0);
+            background-color: rgba(255, 255, 255, 0.788);
+            height: 300px;
+            width: 400px;
+            text-align: center;
+            font-size: 20px;
+            border-radius: 20px;
+            padding: 20px 30px;
+            border: solid black 1px;
+        }
+        
+        
+        .popup-content-product  button {
+            padding: 10px 70px;
+            border-radius: 30px;
+            margin-top: 40px;
+            background-color:rgba(76, 51, 142, 1);
+            font-family: 'Cal Sans';
+            font-size: 16px;
+            transition: all 0.5s ease 0s;
+        }
+
+        .popup-content-product  button:hover {
+            background-color: darkgreen;
+            transform: scale(1.05);
+            font-size: larger;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .socials-section {
+            margin-top: 100px;
+            border-top: solid;
+            
+
+        }
+
+        .socials-title {
+            text-align: end;
+            font-size: 70px;
+            margin-right: 30px;
+            
+        }
+
+        .social-main-text {
+            margin-top: 40px;
+            margin-right: 30px;
+            text-align: center;
+        }
+
+        .socials-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+            margin-top: 50px;
+            padding: 30px 0px; 
+            background: rgb(76, 51, 142)
+        }
+
+        .socials-links {
+            display: flex;
+            margin-top: 30px;
+            flex-direction: column;
+            gap: 20px;
+            padding: 50px 30px;
+            border-radius: 0px 100px 100px 0px;
+            background: rgb(255, 255, 255);
+            transition: all 0.5s ease 0s;
+
+            
+        }
+        
+        .socials-links:hover {
+            background-color: rgb(255, 255, 255);
+            color:rgb(255, 255, 255);
+            
+        }
+
+        .social-item {
+            
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            gap: 10px;
+            transition: all 0.5s ease 0.05s;
+            cursor: pointer;
+            
+        }
+
+        .social-item:hover{
+            transform: translateX(80px);
+            color: black;
+            background-color: white;
+            padding: 0px 20px;
+            border-radius: 90px;
+            border-style:solid;
+            border-color: rgb(76, 51, 142);
+            
+        }
+        .social-item img {
+            width: 70px;
+            height: 70px;
+            padding: 0px 10px;
+            object-fit: cover;
+        }
+
+        .social-item span {
+            font-size: 20px;
+            
+        }
+
+        .socials-video {
+            height: 550px;
+            margin-right: 70px;
+            margin-top: 80px;
+            border-radius: 10px 1100px 0px 90px;
+            transition: all 1s ease 0s;
+        }
+
+        .socials-video:hover {
+            border-radius: 1100px 100px 0px 0px;
+        }
+
+
+        .social-main-text {
+            text-align: end;
+            
+        }
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .branches-section {
+            margin-top: 80px;
+        }
+
+        .branches-title {
+            font-size: 70px;
+            margin-left: 30px;
+        }
+
+        .branches-section video {
+            height: 945px;
+        }
+        
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .video-container video {
+            height: 945px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .video-text {
+            position: absolute;
+            top: 65px; 
+            right: 0px;
+            background-color:rgb(255, 255, 255);
+            padding: 105px 50px;
+            border-radius: 400px 400px 0px 0px;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            font-size: 25px;
+            letter-spacing: 5px;
+            transition: all 0.5s ease 0s;
+            
+        }
+
+        .video-text ul {
+            list-style: none;
+            margin-top: 20px;
+            
+        }
+        
+        .video-text li:hover {
+            transform: scale(1.15);
+
+        }
+
+        .video-text h1 {
+            background:  rgb(0, 0, 0);
+            border-radius: 30px;
+            color: white;
+            padding: 0px 20px;
+            cursor: pointer;
+            transition: all 0.5s ease 0s;
+        }
+        
+        .video-text h1:hover {
+            background-color: rgb(76, 51, 142);
+            padding: 10px 50px;
+        }
+        
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .about-section{
+            margin-top: 80px;
+            padding-top: 30px;
+            transition: all 0.5s ease 0,1s;
+            box-shadow: 0px 0px 0px 10px;
+        }
+
+        .about-title {
+            font-size: 70px;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            background-color:  rgb(0, 0, 0);
+            border-radius: 90px;
+            padding: 10px 90px;
+            
+            
+            
+        }
+
+        .about-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top: 40px;
+            margin-bottom: 50px;
+        }
+        .about-text-box {
+            height: 300px;
+            width: 300px;
+            transition: all 0.5s ease 0s;
+        }
+
+        .about-text-box:hover {
+            width: 30%;
+            height: 30%;
+            transform: scale(1.05);
+            font-size: larger;
+            background-color: rgba(76, 51, 142, 0.4);
+            padding: 30px 30px;
+            border-radius: 40px;
+        }
+
+
+
+
+
+        .person-container {
+            background-color: black;
+            border-radius: 1000px 1000px 0px 0px;
+            padding-top: 50px;
+            transition: all 0.5s ease 0s;
+        }
+
+        .person-container:hover{
+            transform: translateY(-10px);
+        }
+
+        .person {
+            display: block;
+            justify-items: center;
+            align-content: center;
+            color: rgb(0, 0, 0);
+            font-size: 23px;
+            font-family:'Gill Sans';
+            transition: all 0.5s ease 0s;
+        }
+
+        .person:hover{
+            font-size: larger;
+            padding-bottom: 50px;
+            color: white;
+        }
+        .person img {
+            display: block;
+            margin: auto 20px;
+            width: 700px;
+            height: 300px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 150px;
+            transition: all 0.5s ease 0s;
+        }
+
+
+        
+
+        .person p, 
+        .person h4 {
+            text-align: center;
+            letter-spacing: 2px;
+            width: 70%;
+        }
+            
+        .person h2 {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .person h4 {
+            margin-bottom: 40px;
+        }
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .sign-in-title{
+            font-size: 70px;
+            margin-top: 40px;
+            text-align: center;
+            
+        }
+
+        .sign-in-section{
+            margin-top: 40px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .sign-in-section video {
+            width: 100%;
+            height: 100%;
+        }
+
+        .sign-in-container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            backdrop-filter: blur(20px);
+            width: 400px;
+            height: 350px;
+            padding: 50px 20px;
+            box-shadow: 0px 0px 12px black;
+            border-radius: 40px;
+            display: block;
+            justify-items: center;
+            align-content: center;
+            text-align: center;
+            color: white;
+            
+        }
+
+        .sign-in-container h1 {
+            margin-bottom: 30px;
+            font-size: 40px;
+        }
+
+        .input-box {
+            margin: 10px 10px;   
+        }
+
+
+        .input-box input{
+            width: 300px;
+            height: 30px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 50px;
+            text-indent: 20px;
+            background-color: transparent;
+            border-color: white;
+            color: white;
+            
+        }
+
+        .input-box input::placeholder {
+            color: white;
+            
+        }
+
+        .sign-in-container button {
+            width: 350px;
+            margin-top: 20px;
+            height: 50px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-family: 'Cal Sans';
+            transition: all 0.5s ease 0s;
+        }
+
+        .sign-in-container button:hover {
+            background-color:rgba(76, 51, 142, 1);
+            transform: scale(1.05);
+            font-size: larger;
+            border-style: solid;
+            color: white;
+            
+        }
+
+
+        .popup-modal {
+            display:none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            backdrop-filter: blur(15px);
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+        }
+        
+
+        .popup-content {
+            display: block;
+            justify-items: center;
+            align-content: center;
+            color: rgb(0, 0, 0);
+            background-color: rgba(255, 255, 255, 0.788);
+            height: 300px;
+            width: 400px;
+            text-align: center;
+            font-size: 20px;
+            border-radius: 20px;
+            padding: 20px 30px;
+            border: solid black 1px;
+        }
+        
+        
+        .popup-content button {
+            padding: 10px 70px;
+            border-radius: 30px;
+            margin-top: 40px;
+            background-color:rgba(76, 51, 142, 1);
+            font-family: 'Cal Sans';
+            font-size: 16px;
+            transition: all 0.5s ease 0s;
+        }
+
+        .popup-content button:hover {
+            background-color: darkred;
+            transform: scale(1.05);
+            font-size: larger;
+        }
+
+    </style>
+
+    <body>
+
+    <div class="background">
+
+            
+        <div class="navbar">
+            <img class="logo" src="new-project/main-images/company.png">
+        
+            <nav>
+                <ul>
+                    <li><a target="_blank" href="Testing/Home.html">HOME</a></li>
+                    <li><a target="_blank" href="Testing/Products.html">PRODUCTS</a></li>
+                    <li><a target="_blank" href="Testing/socials.html">SOCIALS</a></li>
+                    <li><a target="_blank" href="Testing/Branches.html">BRANCHES</a></li>
+                    <li><a target="_blank" href="Testing/About.html">ABOUT</a></li>
+                </ul>
+            </nav>
+            <a class="Sign-in" target="_blank" href="Testing/Sign-in.html"><button>SIGN - IN</button></a>
+        </div>
+
+        <div class="main">
+            <video loop autoplay src="new-project/video/iphone.mp4"></video>
+        
+            <div class="home-title">
+                The Future of <br> 
+                <span class="Technology-text">Technology</span>
+                
+                <div class="main-text"><br><br>Explore our carefully curated selection of premium gadgets, from cutting-edge smartphones to feature-packed smartwatches and crystal-clear wireless earbuds. Shop now and stay ahead of the tech curve!
+                    <br><br><br><br><br><br> <span class="arrow">&#8691;</span>
+                    <br> <span style="font-size: 13px;"><br>Scroll down to know more</span> 
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="main-video-container">
+        <video loop autoplay src="new-project/video/main.mp4"></video>
+
+        <div class="main-video-text"><button><a target="_blank" href="Testing/Products.html">Seek Our Products</a></button><br> These phones are <br>one click away !</div>
+
+    </div>
+    
+    
+
+
+
+
+
+
+    <div class="Products-section">
+        <div class="Products-title"> Our beloved Products </div>
+            
+
+            <div class="product-banner">
+                <img src="new-project/main-images/iphone.png">
+                <div class="banner-text">
+
+                    <h1>Shangphone</h1>
+                    <p>Meet the Shangphone family.</p>
+                    
+                </div>
+            </div>
+            <div class="Products">
+        
+                <div class="Product-item">
+                    <img src="new-project/main-images/Product1.png" alt="Zen Product 1">
+                    <h1>
+                      Shangphone 17 Pro Max <br>
+                      <span>From ₱69,990</span>
+                      <br>
+                      <button type="button" onclick="popupOpen()"> Buy now </button>
+                    </h1>
+                    
+                  </div>
+                
+                  <div class="Product-item">
+                    <img src="new-project/main-images/Product2.png">
+                    <h1>
+                      Shangphone 16 Pro <br>
+                      <span>From ₱54,990</span>
+                      <button type="button" onclick="popupOpen()"> Buy now </button>
+                    </h1>
+                    
+                  </div>
+                
+                  <div class="Product-item">
+                    <img src="new-project/main-images/Product4.png">
+                    <h1>
+                      Shangphone 15 Pro <br>
+                      <span>From ₱40,800</span>
+                      <button type="button" onclick="popupOpen()"> Buy now </button>
+                    </h1>
+                  </div>
+                
+                  <div class="Product-item">
+                    <img src="new-project/main-images/Product3.png">
+                    <h1>
+                      Shangphone 14 <br>
+                      <span>From ₱37,270</span>
+                      <button type="button" onclick="popupOpen()"> Buy now </button>
+                    </h1>
+                  </div>
+                
+                  <div class="Product-item">
+                    <img src="new-project/main-images/Product5.webp">
+                    <h1>
+                      Shangphone 11 <br>
+                      <span>2022 Model</span><br>
+                      <span>From ₱25,800</span>
+                      <button type="button" onclick="popupOpen()"> Buy now </button>
+                    </h1>
+                  </div>
+                
+                  <div class="Product-item">
+                    <img src="new-project/main-images/Product6.jpg">
+                    <h1>
+                      Shangphone X <br>
+                      <span>1995 Model</span><br>
+                      <span>From ₱20,199</span>
+                      <button type="button" onclick="popupOpen()"> Buy now </button>
+                    </h1>
+                  </div>
+        
+            
+
+            </div>
+    
+        </div>
+    </div>
+    
+    <div id="popupModal-product" class="popup-modal-product">
+        <div class="popup-content-product">
+            <h2>Thank You for Your Purchase!</h2>
+            <br>
+            <p>Your order has been received and is being processed.
+                <br>We will notify you once its ready or shipped.</p>
+            <button onclick="closePopup()">Okay</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="socials-section">
+
+        <div class="socials-title"> Reach us with our social platforms </div>
+    
+        <div class="social-main-text">
+            <h1>Join the Zen Revolution! 🚀</h1>
+            <p>Follow us on all our platforms and unlock secret tech tips, exclusive giveaways, and mind-bending challenges! 🌟</p>
+            <p>Were already a growing family of <strong>45,200+ tech enthusiasts</strong> — are you ready to level up your tech game? 🔥</p>
+        </div>
+    
+    
+        <div class="socials-content">
+            
+            <div class="socials-links">
+                <div class="social-item">
+                    <img src="new-project/main-images/facebook.webp" alt="Facebook">
+                    <span>@Jeremy Cajurao</span>
+                </div>
+    
+                <div class="social-item">
+                    <img src="new-project/main-images/instagram.webp" alt="Instagram">
+                    <span>@toastedgarlicbread.lpl</span>
+                </div>
+    
+                <div class="social-item">
+                    <img src="new-project/main-images/Twitter.jpg" alt="Twitter">
+                    <span>@owimjee_</span>
+                </div>
+    
+                <div class="social-item">
+                    <img src="new-project/main-images/youtube.webp" alt="YouTube">
+                    <span>Seensungg</span>
+                </div>
+    
+                <div class="social-item">
+                    <img src="new-project/main-images/tiktok.png" alt="TikTok">
+                    <span>Elon mah</span>
+                </div>
+    
+                <div class="social-item">
+                    <img src="new-project/main-images/telegram.webp" alt="Telegram">
+                    <span>@Stick-o Community</span>
+                </div>
+            </div>
+    
+            <video class="socials-video" loop autoplay muted src="new-project/video/social-media.mp4"></video>
+        
+        </div>
+    
+    </div>
+    
+
+
+
+
+
+
+    <div class="branches-section">
+
+        <div class="branches-title"> Where are we located?</div>
+
+            <div class="video-container">
+                <video autoplay loop muted src="new-project/video/location.mp4"></video>
+        
+                    <div class="video-text">
+                        <h1>Want to visit ? </h1>
+                        <br><br>
+                        <ul>
+                            <h2>Main Branches</h2>
+                            <br>
+                            <ul>
+                              <li>Metro Manila - Ortigas Center</li>
+                              <li>Visayas - Cebu IT Park</li>
+                              <li>Mindanao - Davao Downtown</li>
+                            </ul>
+                            <br>
+                            
+                            <h2>Regional Branches</h2>
+                            <br>
+                            <ul>
+                              <li>Calabarzon - Sta. Rosa, Laguna</li>
+                              <li>Central Luzon - Angeles City</li>
+                              <li>North Luzon - Baguio City</li>
+                              <li>South Luzon - Batangas City</li>
+                              <li>Eastern Visayas - Tacloban City</li>
+                              <li>Western Mindanao - Zamboanga City</li>
+                              
+                            </ul>
+                    </div>
+            </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="about-section">
+        <div class="about-title">Curious about this Company?</div>
+            <div class="about-container">
+
+
+                        <div class="about-text-box">
+                            <h2>Who We Are</h2>
+                            <p>
+                                STECH-O is a dynamic technology solutions provider committed to redefining how businesses and individuals interact with digital innovation. Built on a foundation of curiosity, precision, and forward-thinking design, STECH-O is more than just a tech company — it's a launchpad for ideas that shape the future. Whether you're a startup or an enterprise, we aim to bring cutting-edge technology to your fingertips.
+                            </p>
+
+                        </div>
+
+
+                        <div class="about-text-box">
+                            <h2>What We Do</h2>
+                            <p>
+                                We specialize in delivering scalable, user-centered software and hardware solutions across industries — from smart automation to intelligent systems, cloud architecture, and custom development. At STECH-O, every product is crafted with performance, security, and user experience in mind. Our team thrives at the intersection of technology and creativity, always pushing boundaries and solving complex problems with elegance.
+                            </p>
+
+                        </div>
+
+                        <div class="about-text-box">
+                            <h2>Why Choose STECH-O</h2>
+                            <p>
+                                At our core, we believe in impact-driven innovation. STECH-O is not just about delivering solutions — it’s about creating lasting partnerships, empowering our clients, and driving meaningful change through technology. We’re here to challenge conventions, think boldly, and execute with precision, every step of the way.
+                            </p>
+
+                        </div>
+                        
+                        
+                        
+              
+            </div>
+            
+
+
+            <div class="person-container">
+                <div class="person">
+                    <img src="new-project/main-images/jeremy.JPG"> 
+                    <h2>Jeremy A. Cajurao</h2>
+                    
+                    <h4>CEO of Shangheart & STECH-O Company</h4>
+                    <p>the Chief Executive Officer of Shangheart and STECH-O Company, where he oversees business operations, strategic planning, and company growth. Despite his young age, he demonstrates exceptional leadership, balancing his responsibilities as a CEO with his academic journey as a Senior High School student at JBEST School of Technology and Practical Skills Inc. He is driven by innovation, discipline, and a strong vision for the future, continuously working to expand his knowledge and impact in the tech and business industry.</p>
+                </div>
+            </div>
+            
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="sign-in-title">You may wanna sign-in first</div>
+    <div class="sign-in-section">
+        
+        <video loop autoplay src="new-project/video/sign-in.mp4"></video>
+
+
+        <div class="sign-in-container">
+            <form action="">
+
+                    <h1>Sign - in</h1>
+
+                    <div class="input-box">
+                        <input type="text" placeholder="Username" required>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="password" placeholder="Password" required>
+                    </div>
+
+
+                    <div class="Forgot">
+                        <a href="#">Forgot Password?</a>
+                    </div>
+
+                    <button type="button" onclick="openSignInPopup()">Sign-in</button>
+
+
+            </form>
+        </div>
+        
+    
+    </div>
+
+
+    <div id="popupModal" class="popup-modal">
+        <div class="popup-content">
+            <h2> Welcome to STECH-O
+            </h2> <br>
+            <p>Unfortunately, this website is under-construction and cannot record your data properly. 
+                <br> You can come back after it's fixed.</p>
+            <button onclick="closeSignInPopup()">Close</button>
+        </div>
+    </div>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+
+    // hello popup lalabas
+    function popupOpen() {
+document.getElementById("popupModal-product").style.display = "flex";
+}
+
+    // byebye popup tatagoss
+function closePopup() {
+document.getElementById("popupModal-product").style.display = "none";
+}
+
+
+
+
+                // hello popup lalabas
+function openSignInPopup() {
+  document.getElementById("popupModal").style.display = "flex";
+}
+
+                // byebye popup tatago
+function closeSignInPopup() {
+  document.getElementById("popupModal").style.display = "none";
+}
+
+
+</script>
+
+</html>

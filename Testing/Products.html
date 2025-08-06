@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tech-O</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+
+</head>
+
+<style>
+    * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Cal Sans', 'Segoe UI';
+            
+        }
+
+
+        .background {
+            background-color: black;
+            
+        }
+
+        .navbar {
+            display: flex;
+            width: 100%;
+            height: 15vh;
+            margin: auto;
+            align-items: center;
+            justify-content: flex-end;
+        }
+            
+        .logo {
+            width: 200px;
+            cursor: pointer;
+            margin-right: auto;
+            padding-left: 40px;
+        }
+
+        .navbar {
+            list-style: none;
+            border-bottom: solid;
+            border-color: white;  
+        }
+
+        .navbar li {
+            display: inline-block;
+            padding: 0px 25px;
+            
+        }
+
+        .navbar li a {
+            transition: all 0.5s ease 0.05s;
+            text-decoration: none;
+            font-family: 'Cal Sans', 'Segoe UI';
+            color: white;
+            font-size: 15px;
+        }
+
+        .navbar li a:hover {
+            background-image: conic-gradient(
+            from 0deg,
+            indigo 0deg,
+            mediumblue 90deg,
+            slateblue 150deg,
+            darkslateblue 210deg,
+            midnightblue 270deg,
+            #1a1a2e 330deg,
+            indigo 360deg );
+            border-style: solid;
+            border-color: white;
+            padding:9px 20px;
+            border-radius: 30px 0px 30px 0px;
+            
+        }
+
+        .background button {
+            background-color: rgba(76, 51, 142, 0.5);
+            padding: 10px 40px;
+            border-radius: 30px 0px 30px 0px;
+            color: white;
+            font-family: 'Cal Sans', 'Segoe UI';
+            font-size: 15px;
+            margin-right: 50px;
+            margin-left: 30px;
+            transition: all 0.5s ease 0s;
+            border-style: solid;
+            border-color: white;
+        }
+
+        .background button:hover {
+            transform: translatey(4px) scale(1.15);
+            border-style: solid;
+            border-color: white;
+            padding: 10px 40px;
+            border-radius: 0px 30px 0px 30px;
+            background-image: conic-gradient(
+            from 0deg,
+            indigo 0deg,
+            mediumblue 90deg,
+            slateblue 150deg,
+            darkslateblue 210deg,
+            midnightblue 270deg,
+            #1a1a2e 330deg,
+            indigo 360deg );
+        }
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        .Products-section {
+            margin-top: 80px;
+            
+        }
+
+        .Products-title {
+            font-size: 80px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .product-banner {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+
+        }
+
+        .product-banner img {
+            border-radius: 1000px;
+            width: 1300px;
+            height: 500px;
+            object-fit: cover;
+            transition: all 0.5s ease 0s;
+            box-shadow: 1px 3px 5px 2px;
+    
+        }
+
+        .product-banner img:hover {
+            transform: scale(1.05);
+            box-shadow: 10px 10px 10px 1px;
+        }
+
+        .banner-text {
+            position: absolute;
+            bottom: 30px;
+            font-size: 30px;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            text-indent: 30px;
+        }
+
+
+        .Products {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 itemss , 1 row */
+            gap: 100px; 
+            margin: 0px 120px 0px 120px;
+            justify-items: center;
+            margin-top: 40px;
+        }
+
+        .Product-item {
+            display: flex;
+            flex-direction: row;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            width: 100%;
+            box-shadow: 1px 1px 15px 2px rgba(0, 0, 0, 0.4);
+            
+        }
+
+        .Product-item:hover {
+            transform: scale(1.05);
+            box-shadow: 5px 15px 30px 10px rgba(0, 0, 0, 0.4);
+            border: 1px solid gray;
+        }
+
+        .Product-item img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: contain;
+        }
+
+        .Product-item h1 {
+            font-size: 24px;
+            color: rgb(0, 0, 0);
+            font-family: 'Cal Sans', sans-serif;
+            margin: 40px 30px 0px 30px;
+            
+        }
+
+        .Product-item span {
+            font-size: 18px;
+            font-weight: lighter;
+        }
+
+
+        .Product-item button {
+            background-color: rgba(76, 51, 142, 0.8);
+            color: white;
+            border: none;
+            margin-top: 70px;
+            font-size: 20px;
+            padding: 15px 90px;
+            border-radius: 25px;
+            font-family: 'Cal Sans';
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .Product-item button:hover {
+            background-color: indigo;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .popup-modal-product {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            backdrop-filter: blur(15px);
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+        }
+        
+
+        .popup-content-product  {
+            display: block;
+            justify-items: center;
+            align-content: center;
+            color: rgb(0, 0, 0);
+            background-color: rgba(255, 255, 255, 0.788);
+            height: 300px;
+            width: 400px;
+            text-align: center;
+            font-size: 20px;
+            border-radius: 20px;
+            padding: 20px 30px;
+            border: solid black 1px;
+        }
+        
+        
+        .popup-content-product  button {
+            padding: 10px 70px;
+            border-radius: 30px;
+            margin-top: 40px;
+            background-color:rgba(76, 51, 142, 1);
+            font-family: 'Cal Sans';
+            font-size: 16px;
+            transition: all 0.5s ease 0s;
+        }
+
+        .popup-content-product  button:hover {
+            background-color: darkgreen;
+            transform: scale(1.05);
+            font-size: larger;
+        }
+
+</style>
+
+
+<body>
+            <div class="background">
+
+                        
+                    <div class="navbar">
+                        <img class="logo" src="new-project/main-images/company.png">
+                    
+                        <nav>
+                            <ul>
+                                <li><a href="Home.html">HOME</a></li>
+                                <li><a href="Products.html">PRODUCTS</a></li>
+                                <li><a href="socials.html">SOCIALS</a></li>
+                                <li><a href="Branches.html">BRANCHES</a></li>
+                                <li><a href="About.html">ABOUT</a></li>
+                    </ul>
+            </nav>
+                        <a class="Sign-in" href="Sign-in.html"><button>SIGN - IN</button></a>
+                    </div>
+
+                    
+                </div>
+
+
+
+
+    <div class="Products-section">
+        <div class="Products-title"> Our beloved Products </div>
+            
+
+            <div class="product-banner">
+                <img src="new-project/main-images/iphone.png">
+                <div class="banner-text">
+
+                    <h1>Shangphone</h1>
+                    <p>Meet the Shangphone family.</p>
+                    
+                </div>
+            </div>
+            <div class="Products">
+        
+                <div class="Product-item">
+                    <img src="new-project/main-images/Product1.png" alt="Zen Product 1">
+                    <h1>
+                      Shangphone 17 Pro Max <br>
+                      <span>From ₱69,990</span>
+                      <br>
+                      <button type="button" onclick="popupOpen()"> Buy now </button>
+                    </h1>
+                    
+                  </div>
+                
+                  <div class="Product-item">
+                    <img src="new-project/main-images/Product2.png">
+                    <h1>
+                      Shangphone 16 Pro <br>
+                      <span>From ₱54,990</span>
+                      <button type="button" onclick="popupOpen()"> Buy now </button>
+                    </h1>
+                    
+                  </div>
+                
+                  <div class="Product-item">
+                    <img src="new-project/main-images/Product4.png">
+                    <h1>
+                      Shangphone 15 Pro <br>
+                      <span>From ₱40,800</span>
+                      <button type="button" onclick="popupOpen()"> Buy now </button>
+                    </h1>
+                  </div>
+                
+                  <div class="Product-item">
+                    <img src="new-project/main-images/Product3.png">
+                    <h1>
+                      Shangphone 14 <br>
+                      <span>From ₱37,270</span>
+                      <button type="button" onclick="popupOpen()"> Buy now </button>
+                    </h1>
+                  </div>
+                
+                  <div class="Product-item">
+                    <img src="new-project/main-images/Product5.webp">
+                    <h1>
+                      Shangphone 11 <br>
+                      <span>2022 Model</span><br>
+                      <span>From ₱25,800</span>
+                      <button type="button" onclick="popupOpen()"> Buy now </button>
+                    </h1>
+                  </div>
+                
+                  <div class="Product-item">
+                    <img src="new-project/main-images/Product6.jpg">
+                    <h1>
+                      Shangphone X <br>
+                      <span>1995 Model</span><br>
+                      <span>From ₱20,199</span>
+                      <button type="button" onclick="popupOpen()"> Buy now </button>
+                    </h1>
+                  </div>
+        
+            
+
+            </div>
+    
+        </div>
+    </div>
+        
+
+
+
+
+    <div id="popupModal-product" class="popup-modal-product">
+        <div class="popup-content-product">
+            <h2>Thank You for Your Purchase!</h2>
+            <br>
+            <p>Your order has been received and is being processed.
+                <br>We will notify you once its ready or shipped.</p>
+            <button onclick="closePopup()">Okay</button>
+        </div>
+    </div>
+
+</body>
+<script>
+    // hello popup lalabas
+function popupOpen() {
+document.getElementById("popupModal-product").style.display = "flex";
+}
+
+    // byebye popup tatagoss
+function closePopup() {
+document.getElementById("popupModal-product").style.display = "none";
+}
+
+</script>
+</html>

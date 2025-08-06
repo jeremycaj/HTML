@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tech-O</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+
+</head>
+
+<style>
+    * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Cal Sans', 'Segoe UI';
+            
+        }
+
+
+        
+        .background {
+            background-color: black;
+            
+        }
+
+        .navbar {
+            display: flex;
+            width: 100%;
+            height: 15vh;
+            margin: auto;
+            align-items: center;
+            justify-content: flex-end;
+        }
+            
+
+        .logo {
+            width: 200px;
+            cursor: pointer;
+            margin-right: auto;
+            padding-left: 40px;
+        }
+
+        .navbar {
+            list-style: none;
+            border-bottom: solid;
+            border-color: white;
+            
+            
+        }
+
+        .navbar li {
+            display: inline-block;
+            padding: 0px 25px;
+            
+        }
+
+        .navbar li a {
+            transition: all 0.5s ease 0.05s;
+            text-decoration: none;
+            font-family: 'Cal Sans', 'Segoe UI';
+            color: white;
+            font-size: 15px;
+        }
+
+        .navbar li a:hover {
+            background-image: conic-gradient(
+            from 0deg,
+            indigo 0deg,
+            mediumblue 90deg,
+            slateblue 150deg,
+            darkslateblue 210deg,
+            midnightblue 270deg,
+            #1a1a2e 330deg,
+            indigo 360deg );
+            border-style: solid;
+            border-color: white;
+            padding:9px 20px;
+            border-radius: 30px 0px 30px 0px;
+            
+        }
+
+        .background button {
+            background-color: rgba(76, 51, 142, 0.5);
+            padding: 10px 40px;
+            border-radius: 30px 0px 30px 0px;
+            color: white;
+            font-family: 'Cal Sans', 'Segoe UI';
+            font-size: 15px;
+            margin-right: 50px;
+            margin-left: 30px;
+            transition: all 0.5s ease 0s;
+            border-style: solid;
+            border-color: white;
+        }
+
+        .background button:hover {
+            transform: translatey(4px) scale(1.15);
+            border-style: solid;
+            border-color: white;
+            padding: 10px 40px;
+            border-radius: 0px 30px 0px 30px;
+            background-image: conic-gradient(
+            from 0deg,
+            indigo 0deg,
+            mediumblue 90deg,
+            slateblue 150deg,
+            darkslateblue 210deg,
+            midnightblue 270deg,
+            #1a1a2e 330deg,
+            indigo 360deg );
+        }
+
+
+
+
+        
+        .branches-section {
+            margin-top: 80px;
+        }
+
+        .branches-title {
+            font-size: 70px;
+            margin-left: 30px;
+        }
+
+        .branches-section video {
+            height: 945px;
+        }
+        
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .video-container video {
+            height: 945px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .video-text {
+            position: absolute;
+            top: 65px; 
+            right: 0px;
+            background-color:rgb(255, 255, 255);
+            padding: 105px 50px;
+            border-radius: 400px 400px 0px 0px;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            font-size: 25px;
+            letter-spacing: 5px;
+            transition: all 0.5s ease 0s;
+            
+        }
+
+        .video-text ul {
+            list-style: none;
+            margin-top: 20px;
+            
+        }
+        
+        .video-text li:hover {
+            transform: scale(1.15);
+
+        }
+
+        .video-text h1 {
+            background:  rgb(0, 0, 0);
+            border-radius: 30px;
+            color: white;
+            padding: 0px 20px;
+            cursor: pointer;
+            transition: all 0.5s ease 0s;
+        }
+        
+        .video-text h1:hover {
+            background-color: rgb(76, 51, 142);
+            padding: 10px 50px;
+        }
+        
+
+
+</style>
+
+<body>
+
+    <div class="background">
+
+                        
+        <div class="navbar">
+            <img class="logo" src="new-project/main-images/company.png">
+        
+            <nav>
+                <ul>
+                                <li><a href="Home.html">HOME</a></li>
+                                <li><a href="Products.html">PRODUCTS</a></li>
+                                <li><a href="socials.html">SOCIALS</a></li>
+                                <li><a href="Branches.html">BRANCHES</a></li>
+                                <li><a href="About.html">ABOUT</a></li>
+                    </ul>
+            </nav>
+                        <a class="Sign-in" href="Sign-in.html"><button>SIGN - IN</button></a>
+        </div>
+
+        
+    </div>
+
+
+
+
+
+
+    <div class="branches-section">
+
+        <div class="branches-title"> Where are we located?</div>
+
+            <div class="video-container">
+                <video autoplay loop muted src="new-project/video/location.mp4"></video>
+        
+                    <div class="video-text">
+                        <h1>Want to visit ? </h1>
+                        <br><br>
+                        <ul>
+                            <h2>Main Branches</h2>
+                            <br>
+                            <ul>
+                              <li>Metro Manila - Ortigas Center</li>
+                              <li>Visayas - Cebu IT Park</li>
+                              <li>Mindanao - Davao Downtown</li>
+                            </ul>
+                            <br>
+                            
+                            <h2>Regional Branches</h2>
+                            <br>
+                            <ul>
+                              <li>Calabarzon - Sta. Rosa, Laguna</li>
+                              <li>Central Luzon - Angeles City</li>
+                              <li>North Luzon - Baguio City</li>
+                              <li>South Luzon - Batangas City</li>
+                              <li>Eastern Visayas - Tacloban City</li>
+                              <li>Western Mindanao - Zamboanga City</li>
+                              
+                            </ul>
+                    </div>
+            </div>
+    </div>
+
+        
+</body>
+
+</html>
